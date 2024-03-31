@@ -65,8 +65,8 @@
         </div>
     </nav>
     <div class="sidebar bg-dark">
-        <a href="/products">View Students</a>
-        <a href="/products/create">Add Student</a>
+        <a href="/students">View Students</a>
+        <a href="/students/create">Add Student</a>
         <div class=" dropdown bg-dark">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Manage your account

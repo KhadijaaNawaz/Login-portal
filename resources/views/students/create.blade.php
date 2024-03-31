@@ -44,14 +44,14 @@
     <div class="alert alert-success" role="alert">
         {{ session('success') }}
     </div>
-    <a href="/products" class="btn btn-danger" role="button">Back to students</a>
+    <a href="/students" class="btn btn-danger" role="button">Back to students</a>
 
 @endif
     <div class="container my-5 ">
         <div class="row justify-content-center my-5">
            
             <div class="col-md-6"> 
-            <form method="post" action="{{ route('products.store') }}" class="form">
+            <form method="post" action="{{ route('students.store') }}" class="form">
             @csrf 
                 <h2 class="h2 fw-bold mb-3 text-center">Add new student</h2>
 

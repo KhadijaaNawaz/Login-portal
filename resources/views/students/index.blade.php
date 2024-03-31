@@ -67,8 +67,8 @@
     </nav>
     <div class="sidebar bg-dark">
        
-        <a href="/products">View Students</a>
-        <a href="/products/create">Add Student</a>
+        <a href="/students">View Students</a>
+        <a href="/students/create">Add Student</a>
         <div class=" dropdown bg-dark">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Manage your account
@@ -100,17 +100,17 @@
                 </tr>
             </thead>
             <tbody  class="bg-light text-text-dark" >
-                @foreach($products as $product)
+                @foreach($students as $student)
                 <tr>
                     <td>{{ $loop->index+1}}</td>
-                    <td>{{ $product->name}}</td>
-                    <td>{{ $product->email}}</td>
-                    <td>{{ $product->number}}</td>
-                    <td>{{ substr(bcrypt($product->password), 0, 10) }}...</td>
+                    <td>{{ $student->name}}</td>
+                    <td>{{ $student->email}}</td>
+                    <td>{{ $student->number}}</td>
+                    <td>{{ substr(bcrypt($student->password), 0, 10) }}...</td>
                     <td>
-                    <a class="btn btn-primary btn-sm" href="{{ route('products.edit', ['product' => $product->id]) }}" role="button">Update</a>
+                    <a class="btn btn-primary btn-sm" href="{{ route('students.edit', ['student' => $student->id]) }}" role="button">Update</a>
 
-                    <form action="{{ route('products.destroy', ['product' => $product->id]) }}" method="POST" style="display: inline;">
+                    <form action="{{ route('students.destroy', ['student' => $student->id]) }}" method="POST" style="display: inline;">
                      @csrf
                      @method('DELETE')
                     <button type="submit" class="btn bg-danger text-light btn-sm" onclick="return confirmDelete()">Delete</button>
@@ -121,7 +121,7 @@
                 @endforeach
             </tbody>
         </table>
-        <a href="/products/create" class="btn btn-primary" role="button">Add New Student</a>
+        <a href="/students/create" class="btn btn-primary" role="button">Add New Student</a>
     </div></div>
 </div>
     <script>

@@ -44,29 +44,29 @@
     <div class="alert alert-success" role="alert">
         {{ session('success') }}
     </div>
-    <a href="/products" class="btn btn-danger" role="button">Back to Students</a>
+    <a href="/students" class="btn btn-danger" role="button">Back to Students</a>
 
 @endif
     <div class="container my-5 ">
         <div class="row justify-content-center my-5">
            
             <div class="col-md-6"> 
-            <form action="{{ route('products.update', ['product' => $product->id]) }}" method="POST"  class="form">
+            <form action="{{ route('students.update', ['student' => $student->id]) }}" method="POST"  class="form">
     @csrf
     @method('PUT')
                 <h2 class="h2 fw-bold mb-3 text-center">Updation Form</h2>
 
                     <div class="mb-3">
                         <label for="name" class="form-label fw-bold">Name</label>
-                        <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp" value="{{ $product->name }}" required>
+                        <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp" value="{{ $student->name }}" required>
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label fw-bold">Email address</label>
-                        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" value="{{ $product->email }}" required>
+                        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" value="{{ $student->email }}" required>
                     </div>
                     <div class="mb-3">
                         <label for="number" class="form-label fw-bold">Phone</label>
-                        <input type="tel" class="form-control" id="number" name="number" aria-describedby="emailHelp" value="{{ $product->number }}" required>
+                        <input type="tel" class="form-control" id="number" name="number" aria-describedby="emailHelp" value="{{ $student->number }}" required>
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label fw-bold">Password</label>

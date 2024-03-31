@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Auth\AccountController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\Productcontroller;
+use App\Http\Controllers\StudentController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Middleware\Authenticate;
 use App\Http\Controllers\PController;
@@ -26,7 +26,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/update_password', [AccountController::class, 'updatePassword'])->name('update_password');
     Route::post('/delete_account', [AccountController::class, 'deleteAccount'])->name('delete_account');
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
-    Route::resource('products', PController::class);
+    Route::resource('students', StudentController::class)->except(['show']);
+
 });
 
 

@@ -68,8 +68,8 @@
     </nav>
     <div class="sidebar bg-dark">
        
-        <a href="/products">View Students</a>
-        <a href="/products/create">Add Student</a>
+        <a href="/students">View Students</a>
+        <a href="/students/create">Add Student</a>
         <div class=" dropdown bg-dark">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Manage your account
@@ -92,7 +92,7 @@
                     <p>To manage student data within our institute, you are provided with the functionality to securely store and manipulate their information. This system allows for the inclusion of student details, including their encrypted passwords, ensuring utmost security and privacy.</p>
                     <p>Within this platform, you have the capability to update existing student records, ensuring that the information remains accurate and up-to-date. Additionally, you can delete records as necessary, maintaining the integrity and relevance of the stored data.</p>
                 </div>
-             <a href="/products">   <button class="btn btn-secondary m-3">View Your added students data</button> </a>
+             <a href="{{ route('students.index') }}">   <button class="btn btn-secondary m-3">View Your added students data</button> </a>
             </div>
         </div>
     </div>
